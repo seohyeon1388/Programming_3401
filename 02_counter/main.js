@@ -7,9 +7,11 @@ function addBtn(num){
 
 //선생님 코드
 // const resultH1= document.getElementsByTagName("h1")[0];
-const resultH1 = document.querySelector("h1");
+// const resultH1 = document.querySelector("h1");
 // const result1 = document.querySelectorAll("h1")[0];
-const plusButton = document.querySelector("button");
+const result1=document.getElementById("result");
+const plusButton = document.getElementsByClassName("plusbutton")[0];
+// const plusButton = document.querySelector("button");
 
 let count = 0;
 // plusButton.addEventListener("click",() => { //위에 불러도 호이스팅이 됨
