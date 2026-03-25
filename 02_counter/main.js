@@ -10,7 +10,7 @@ function addBtn(num){
 // const resultH1 = document.querySelector("h1");
 // const result1 = document.querySelectorAll("h1")[0];
 const result1=document.getElementById("result");
-const plusButton = document.getElementsByClassName("plusbutton")[0];
+// const plusButton = document.getElementsByClassName("plusbutton")[0];
 // const plusButton = document.querySelector("button");
 
 let count = 0;
@@ -19,7 +19,11 @@ let count = 0;
 //     resultH1.innerHTML = count;
 // }); //plus는 함수! ()없는 이유? => return값을 나오기 떄문에 언디파인드가 나옴
 
-plusButton.onclick=()=>{
+// plusButton.onclick=()=>{
+//     count++;
+//     result1.innerText=count;
+// }
+function plus(){
     count++;
-    resultH1.innerText=count;
+    result1.innerHTML=count;
 }
