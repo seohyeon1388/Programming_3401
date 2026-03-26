@@ -23,6 +23,7 @@ let count = 0;
 //     count++;
 //     result1.innerText=count;
 // }
+result1.innerHTML=count;
 function plus(){
     count++;
     result1.innerHTML=count;
