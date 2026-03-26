@@ -19,6 +19,7 @@ let count = 0;
 //     resultH1.innerHTML = count;
 // }); //plus는 함수! ()없는 이유? => return값을 나오기 떄문에 언디파인드가 나옴
 
+
 // plusButton.onclick=()=>{
 //     count++;
 //     result1.innerText=count;

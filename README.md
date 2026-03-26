@@ -1,5 +1,11 @@
-# Programming 소스 코드
+# Programming 소스코드
 
-## 02_counter
+### 02_counter
 
 vanilla HTML, JavaScript
+
+## Reate 시작
+
+```shell
+npm create vite@latest .
+```
