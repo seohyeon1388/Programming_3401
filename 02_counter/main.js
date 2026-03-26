@@ -24,7 +24,15 @@ let count = 0;
 //     result1.innerText=count;
 // }
 result1.innerHTML=count;
-function plus(){
-    count++;
+function plus(n=1){
+    count+=n++;
     result1.innerHTML=count;
 }
+// function plus2(){
+//     plus();
+//     plus();
+// }   
+// function min(){
+//     count--;
+//     result1.innerHTML=count;
+// }
