@@ -1,23 +1,34 @@
+import React from "react";
+import "./todoList.css";
 function TodoListApp() {
   return (
-    <div>
-      <h1>Todo List</h1>
-      <form action="">
-        <input type="text" />
-        <button type="submit">add</button>
+    <div className="todo">
+      <h1 className="todo__title">Todo List</h1>
+      <form className="todo__form">
+        <input
+          type="text"
+          className="todo__input"
+          placeholder="할 일을 입력하세요."
+        />
+        <button type="submit" className="todo__button todo__button--add">
+          Add
+        </button>
       </form>
-      <ul>
-        <li>
-          <input type="checkbox" id="chk-1" />
-          <label htmlFor="chk-1">지각하기</label>
-          <button>수정</button>
-          <button>삭제</button>
+      <ul className="todo__list">
+        <li className="todo__item todo__item--empty">
+          <p>할 일 없음.</p>
         </li>
-        <li>
-          <input type="checkbox" id="chk-2" />
-          <label htmlFor="chk-2">집가기</label>
-          <button>수정</button>
-          <button>삭제</button>
+        <li className="todo__item todo__item--complete">
+          <input type="checkbox" id="chk-1" className="todo__check" />
+          <label htmlFor="chk-1" className="todo__label">
+            지각하기
+          </label>
+          <button type="button" className="todo__button todo__button--edit">
+            수정
+          </button>
+          <button type="button" className="todo__button todo__button--delete">
+            삭제
+          </button>
         </li>
       </ul>
     </div>
