@@ -6,7 +6,7 @@ import TodoHeader from "./components/TodoHeader.jsx";
 import TodoAdder from "./components/TodoAdder.jsx";
 //import TodoItem from "./components/TodoItem.jsx";
 import TodoList from "./components/TodoList.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 class Todo {
   constructor(text) {
@@ -15,9 +15,16 @@ class Todo {
     this.isCompleted = false; //완료여부 : 미완
   }
 }
-
+const TODOS_STORAGE_KEY = "todos";
 function TodoListApp() {
-  const [todos, setTodos] = useState([]); //할일 목록 저장 state
+  function initTodos() {
+    const savedTodos = localStorage.getItem(TODOS_STORAGE_KEY);
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  }
+  const [todos, setTodos] = useState(initTodos); //할일 목록 저장 state
+  useEffect(() => {
+    localStorage.setItem(TODOS_STORAGE_KEY, JSON.stringify(todos));
+  }, [todos]);
   function addTodo(text) {
     setTodos((todos) => [...todos, new Todo(text)]);
   }
