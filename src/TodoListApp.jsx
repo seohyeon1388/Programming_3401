@@ -27,11 +27,14 @@ function TodoListApp() {
   function deleteTodo(id) {
     setTodos((todos) => todos.filter((todo) => todo.id !== id));
   }
+  function editTodo(id, newText) {
+    setTodos((todos) => todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo)));
+  }
   return (
     <div className="todo">
       <TodoHeader />
       <TodoAdder addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} />
     </div>
   );
 }

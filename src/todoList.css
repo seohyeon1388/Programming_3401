@@ -51,6 +51,10 @@
     flex: 1;
     margin-left: 10px;
 }
+.todo__item--edit{
+    flex-grow: 1;
+    
+}
 .todo__button--edit, .todo__button--delete{
     font-size: 1.1rem;
     margin: 3px;
