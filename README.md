@@ -15,7 +15,7 @@ npm create vite@latest .
 - `useState(초기값)`
 - `onClick={()=>set함수(바꿀값)}`
 - `onClick={()=>set함수(이전 state)=>이전state+1}`
-- `onClick={plusMax10}`
+- `onClick={plusMax10}
 
 ### TodoListApp
 
@@ -33,4 +33,5 @@ npm create vite@latest .
 - `{조건식 ? 참 : 거짓}`
 - `{조건식 && 참}`, `{!조건식 && 거짓}`
   -onKeyDown
-- LocalStorage, `useEffect(명령어, [변할값])`
+- LocalStorage, `useEffect(명령어, [변할값])` -`style={{}}`
+  -HomeApp: state를 이용해서 다른 컴포넌트 표시하자
